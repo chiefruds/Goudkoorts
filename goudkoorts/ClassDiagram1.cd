@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="goudkoorts.GameController">
-    <Position X="4.5" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>GameController.cs</FileName>
@@ -12,21 +12,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.GameView">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="goudkoorts.Kar">
-    <Position X="0.5" Y="8.5" Width="1.5" />
+    <Position X="9.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Kar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="goudkoorts.Baan">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="6.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAEAgAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Baan.cs</FileName>
@@ -36,7 +36,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.Loods">
-    <Position X="4.5" Y="6.5" Width="1.5" />
+    <Position X="3.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Loods.cs</FileName>
@@ -46,14 +46,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.Schip">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Schip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="goudkoorts.Water">
-    <Position X="7.5" Y="4.5" Width="1.5" />
+    <Position X="6.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Water.cs</FileName>
@@ -63,9 +63,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.Wissel">
-    <Position X="1.5" Y="2.5" Width="1.5" />
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Baan" Type="goudkoorts.Baan">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.985" Y="1.643" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Wissel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -73,7 +78,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.kade">
-    <Position X="1.5" Y="4.5" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAIAAAAAAAgACA=</HashCode>
       <FileName>kade.cs</FileName>
@@ -84,7 +89,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.Game">
-    <Position X="4.5" Y="4.5" Width="1.5" />
+    <Position X="3.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAQAAAABAAgAAAAAABAAAAAACA=</HashCode>
       <FileName>Game.cs</FileName>
@@ -99,10 +104,17 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.Countdown">
-    <Position X="6.5" Y="1.25" Width="1.5" />
+    <Position X="3.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Countdown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="goudkoorts.Rangeerterein">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rangeerterein.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -7,5 +7,6 @@ namespace goudkoorts
 {
     public class GameView
     {
+
     }
 }
