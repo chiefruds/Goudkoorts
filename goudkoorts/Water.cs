@@ -7,5 +7,9 @@ namespace goudkoorts
 {
     public class Water : PlaatsEntiteit
     {
+        public Water()
+        {
+            this.Teken = "~";
+        }
     }
 }

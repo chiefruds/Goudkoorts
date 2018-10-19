@@ -11,7 +11,7 @@ namespace goudkoorts
 
         public Loods(String naam)
         {
-            Naam = naam;
+            this.Teken = naam;
         }
     }
 }

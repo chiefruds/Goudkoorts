@@ -9,7 +9,7 @@ namespace goudkoorts
     {
         public Rangeerterrein()
         {
-            this.Teken = "k";
+            this.Teken = "R";
         }
     }
 }
