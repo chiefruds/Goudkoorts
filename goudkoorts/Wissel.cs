@@ -7,8 +7,8 @@ namespace goudkoorts
 {
     public class Wissel
     {
-        public Baan boven {get; set;}
-        public Baan beneden { get; set; }
+        public Baan Boven {get; set;}
+        public Baan Beneden { get; set; }
 
         public bool StaatAan;
     }
