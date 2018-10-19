@@ -15,15 +15,7 @@ namespace goudkoorts
             }
         }
 
-        public int Boven
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int Beneden
+        public int StaatAan
         {
             get => default(int);
             set
