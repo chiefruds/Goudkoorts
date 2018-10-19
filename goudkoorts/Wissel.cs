@@ -7,20 +7,10 @@ namespace goudkoorts
 {
     public class Wissel
     {
-        public Baan Baan
-        {
-            get => default(Baan);
-            set
-            {
-            }
-        }
+        public Baan boven {get; set;}
+        public Baan beneden { get; set; }
 
-        public int StaatAan
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public bool StaatAan;
     }
+
 }

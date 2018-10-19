@@ -7,33 +7,14 @@ namespace goudkoorts
 {
     public class Baan
     {
-        public int Rijrichting
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+
+        public Baan Next { get; set; }
+        public Baan Previous { get; set; }
+
 
         public Kar Kar
         {
             get => default(Kar);
-            set
-            {
-            }
-        }
-
-        public int Next
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int Previous
-        {
-            get => default(int);
             set
             {
             }

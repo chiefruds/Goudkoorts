@@ -24,7 +24,7 @@
   <Class Name="goudkoorts.Baan">
     <Position X="6.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAEAgAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Baan.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -60,18 +60,10 @@
   </Class>
   <Class Name="goudkoorts.Wissel">
     <Position X="6.5" Y="3.25" Width="1.5" />
-    <AssociationLine Name="Baan" Type="goudkoorts.Baan">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.985" Y="1.643" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAEAQAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Wissel.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Baan" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.kade">
     <Position X="0.5" Y="5" Width="1.5" />
