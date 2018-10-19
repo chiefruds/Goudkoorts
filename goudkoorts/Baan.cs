@@ -5,12 +5,10 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Baan
+    public class Baan : PlaatsEntiteit
     {
 
-        public Baan Next { get; set; }
-        public Baan Previous { get; set; }
-
+        public Kar kar { get; set; }
 
         public Kar Kar
         {

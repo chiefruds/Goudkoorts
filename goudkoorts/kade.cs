@@ -5,39 +5,12 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class kade
+    public class Kade : Baan
     {
-        public int HeeftSchip
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
 
-        public Schip Schip
-        {
-            get => default(Schip);
-            set
-            {
-            }
-        }
+       public Schip schip { get; set; }
 
-        public Baan Baan
-        {
-            get => default(Baan);
-            set
-            {
-            }
-        }
-
-        public int HeeftKar
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+       public Water water { get; set; }
 
         public void LaadSchip()
         {

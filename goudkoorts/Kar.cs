@@ -5,7 +5,7 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Kar
+    public class Kar : VerplaatsEntiteit
     {
         public int IsVol
         {
@@ -13,6 +13,19 @@ namespace goudkoorts
             set
             {
             }
+        }
+
+        public Baan Baan
+        {
+            get => default(Baan);
+            set
+            {
+            }
+        }
+
+        public void Beweeg()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

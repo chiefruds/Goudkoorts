@@ -5,7 +5,7 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Schip
+    public class Schip : VerplaatsEntiteit
     {
 
         public int Lading;

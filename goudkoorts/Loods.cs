@@ -5,14 +5,13 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Loods
+    public class Loods : Baan
     {
-        public Baan Baan
+        public String Naam { get; set; }
+
+        public Loods(String naam)
         {
-            get => default(Baan);
-            set
-            {
-            }
+            Naam = naam;
         }
     }
 }

@@ -5,11 +5,7 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Rangeerterrein : Baan
+    public class VerplaatsEntiteit
     {
-        public Rangeerterrein()
-        {
-            this.Teken = "k";
-        }
     }
 }

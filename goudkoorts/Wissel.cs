@@ -5,12 +5,32 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Wissel
+    public class Wissel : Baan
     {
-        public Baan Boven {get; set;}
+        public Baan Boven { get; set; }
         public Baan Beneden { get; set; }
 
-        public bool StaatAan;
+        public Boolean Split { get; set; }
+        public Boolean Aan { get; set; }
+        public Wissel(Boolean aan, Baan boven, Baan beneden, Boolean split)
+        {
+            this.Aan = aan;
+            this.Boven = Boven;
+            this.Beneden = beneden;
+            this.Split = split;
+        }
+
+        public void Wisselen()
+        {
+            this.Aan = !Aan;
+            if(Aan && Split)
+            {
+                this.Next = Boven;
+            } else
+            {
+                this.Next = Beneden;
+            }
+        }
     }
 
 }

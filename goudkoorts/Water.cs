@@ -5,14 +5,7 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Water
+    public class Water : PlaatsEntiteit
     {
-        public Schip Schip
-        {
-            get => default(Schip);
-            set
-            {
-            }
-        }
     }
 }

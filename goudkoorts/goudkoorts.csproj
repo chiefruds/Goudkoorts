@@ -48,13 +48,15 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameController.cs" />
     <Compile Include="GameView.cs" />
-    <Compile Include="kade.cs" />
+    <Compile Include="Kade.cs" />
     <Compile Include="Kar.cs" />
     <Compile Include="Loods.cs" />
+    <Compile Include="PlaatsEntiteit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rangeerterrein.cs" />
     <Compile Include="Schip.cs" />
+    <Compile Include="VerplaatsEntiteit.cs" />
     <Compile Include="Water.cs" />
     <Compile Include="Wissel.cs" />
   </ItemGroup>
