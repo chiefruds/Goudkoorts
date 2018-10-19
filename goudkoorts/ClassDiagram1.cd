@@ -3,18 +3,14 @@
   <Class Name="goudkoorts.GameController">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAA=</HashCode>
       <FileName>GameController.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Game" />
-      <Property Name="GameView" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="goudkoorts.GameView">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -110,11 +106,11 @@
       <FileName>Countdown.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="goudkoorts.Rangeerterein">
+  <Class Name="goudkoorts.Rangeerterrein">
     <Position X="11.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rangeerterein.cs</FileName>
+      <FileName>Rangeerterrein.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

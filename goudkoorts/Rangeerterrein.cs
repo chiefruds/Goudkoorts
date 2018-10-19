@@ -5,7 +5,7 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Rangeerterein : Kar
+    public class Rangeerterrein : Kar
     {
     }
 }

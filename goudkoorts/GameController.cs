@@ -7,20 +7,15 @@ namespace goudkoorts
 {
     public class GameController
     {
-        public Game Game
-        {
-            get => default(Game);
-            set
-            {
-            }
-        }
 
-        public GameView GameView
+        public Game game { get; set; }
+        public GameView gameView { get; set; }
+
+        public GameController()
         {
-            get => default(GameView);
-            set
-            {
-            }
+            game = new Game();
+            gameView = new GameView();
+            gameView.Start();
         }
 
         public void Play()

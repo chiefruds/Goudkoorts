@@ -1,0 +1,7 @@
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.exe.config
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.exe
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.pdb
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.csprojAssemblyReference.cache
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.csproj.CoreCompileInputs.cache
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.exe
+C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.pdb
