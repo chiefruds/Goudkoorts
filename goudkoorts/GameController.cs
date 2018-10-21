@@ -14,7 +14,7 @@ namespace goudkoorts
 
         public GameController()
         {
-            game = new Game();
+            game = new Game(this);
             gameView = new GameView();
             StringArray = new string[game.Veld.GetLength(0), game.Veld.GetLength(1)];
             GenerateStringArray();
@@ -36,6 +36,15 @@ namespace goudkoorts
                 }
             }
         }
+
+        public void SchipAnimatie()
+        {
+            Console.Clear();
+            game.SchipAnimatie();
+            GenerateStringArray();
+            gameView.PrintField(StringArray);
+        }
+
         public void Play()
         {
             throw new System.NotImplementedException();

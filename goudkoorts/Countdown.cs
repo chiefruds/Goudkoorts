@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
+using System.Timers;
 
 namespace goudkoorts
 {
     public class Countdown
     {
-        Thread th;
+        Timer timer;
+        private GameController gc;
 
-        public Countdown(Game game)
+        public Countdown(GameController gc)
         {
-            th = new Thread(game.SchipAnimatie);
+            this.gc = gc;
+            timer = new Timer(500);
+            timer.Elapsed += timer_Elapsed;
+            timer.Start();
+        }
+
+        private void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            gc.SchipAnimatie();
         }
     }
 }

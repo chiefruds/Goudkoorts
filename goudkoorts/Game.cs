@@ -26,17 +26,28 @@ namespace goudkoorts
 
         private Schip Scheep = new Schip();
 
-        public Game()
+        private PlaatsEntiteit ve;
+
+        public Game(GameController gc)
         {
             _generateMap();
             Objecten = new List<VerplaatsEntiteit>();
-            Count = new Countdown(this);
-            RechtsBoven.Next.Next.Next.Teken = Scheep.teken;
+            Count = new Countdown(gc);
+            ve = RechtsBoven;
         }
 
         public void SchipAnimatie()
         {
-
+            if (ve.Next != null)
+            {
+                ve.Next.Teken = Scheep.teken;
+                ve.Teken = "~";
+                ve = ve.Next;
+            } else
+            {
+                ve.Teken = "~";
+                ve = RechtsBoven;
+            }
         }
 
         public void PlayGame()
