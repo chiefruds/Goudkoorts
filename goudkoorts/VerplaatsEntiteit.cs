@@ -7,5 +7,7 @@ namespace goudkoorts
 {
     public class VerplaatsEntiteit
     {
+        public String teken;
+        
     }
 }

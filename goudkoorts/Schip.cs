@@ -10,5 +10,10 @@ namespace goudkoorts
 
         public int Lading;
         public bool Aangemeerd;
+
+        public Schip()
+        {
+            teken = "<  >";
+        }
     }
 }

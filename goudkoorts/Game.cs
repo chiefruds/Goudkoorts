@@ -12,6 +12,8 @@ namespace goudkoorts
 
         public PlaatsEntiteit[,] Veld;
 
+        public Water RechtsBoven;
+
         public List<VerplaatsEntiteit> Objecten;
 
         public Loods[] BeginPunten;
@@ -22,10 +24,19 @@ namespace goudkoorts
 
         public Boolean Playing { get; set; }
 
+        private Schip Scheep = new Schip();
+
         public Game()
         {
             _generateMap();
             Objecten = new List<VerplaatsEntiteit>();
+            Count = new Countdown(this);
+            RechtsBoven.Next.Next.Next.Teken = Scheep.teken;
+        }
+
+        public void SchipAnimatie()
+        {
+
         }
 
         public void PlayGame()
@@ -44,11 +55,19 @@ namespace goudkoorts
             BeginPunten[1] = new Loods("B");
             BeginPunten[2] = new Loods("C");
 
+            RechtsBoven = new Water();
             Veld[0, 0] = new Water();
             for(int i = 1; i < 12; i++)
             {
-                Veld[0, i] = new Water();
-                Veld[0, i].Next = Veld[1, i - 1];
+                if (i == 11)
+                {
+                    Veld[0, i] = RechtsBoven;
+                }
+                else
+                {
+                    Veld[0, i] = new Water();
+                }
+                Veld[0, i].Next = Veld[0, i - 1];
             }
 
             Veld[1, 0] = new Baan();
