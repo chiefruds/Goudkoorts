@@ -268,6 +268,14 @@ namespace goudkoorts
 
             Wissels = new Wissel[5];
             Wissels[0] = (Wissel)Veld[4, 3];
+            if (Wissels[0].Boven == null)
+            {
+                Console.WriteLine("boven is null");
+            }
+            else
+            {
+                Console.WriteLine("boven is niet null");
+            }
             Wissels[1] = (Wissel)Veld[4, 5];
             Wissels[2] = (Wissel)Veld[4, 9];
             Wissels[3] = (Wissel)Veld[6, 6];

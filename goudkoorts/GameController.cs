@@ -18,8 +18,18 @@ namespace goudkoorts
             gameView = new GameView();
             StringArray = new string[game.Veld.GetLength(0), game.Veld.GetLength(1)];
             GenerateStringArray();
+            gameView.Start();
             gameView.PrintField(StringArray);
-            //gameView.Start();
+            //gameView.checkInput(this);
+
+            if(game.Wissels[0].Boven == null)
+            {
+                Console.WriteLine("boven is null");
+            } else
+            {
+                Console.WriteLine("boven is niet null");
+            }
+            Console.ReadLine();
         }
 
         public void GenerateStringArray()

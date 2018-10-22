@@ -22,13 +22,31 @@ namespace goudkoorts
 
         public void Wisselen()
         {
-            this.Aan = !Aan;
+            if(Aan)
+            {
+                Aan = false;
+            } else
+            {
+                Aan = true;
+            }
             if(Aan && Split)
             {
                 this.Next = Boven;
-            } else
+                Teken = "/";
+            } else if(!Aan && Split)
             {
                 this.Next = Beneden;
+                Teken = "\\";
+            } else if(Aan)
+            {
+                Boven.Next = this;
+                Beneden.Next = null;
+                Teken = "/";
+            } else if(!Aan)
+            {
+                Beneden.Next = this;
+                Boven.Next = null;
+                Teken = "\\";
             }
         }
     }
