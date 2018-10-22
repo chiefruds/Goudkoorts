@@ -7,6 +7,10 @@ namespace goudkoorts
 {
     public class Kar : VerplaatsEntiteit
     {
+        public Kar()
+        {
+            teken = "O";
+        }
         public int IsVol
         {
             get => default(int);

@@ -26,7 +26,10 @@ namespace goudkoorts
 
         private Schip Scheep = new Schip();
 
+        private Kar TestKar = new Kar();
+
         private PlaatsEntiteit ve;
+        private PlaatsEntiteit Karve;
 
         public Game(GameController gc)
         {
@@ -34,6 +37,8 @@ namespace goudkoorts
             Objecten = new List<VerplaatsEntiteit>();
             Count = new Countdown(gc);
             ve = RechtsBoven;
+            Karve = BeginPunten[0];
+            Karve.kar = TestKar;
         }
 
         public void SchipAnimatie()
@@ -47,6 +52,47 @@ namespace goudkoorts
             {
                 ve.Teken = "~";
                 ve = RechtsBoven;
+            }
+        }
+
+        public void KarAnimatie()
+        {
+            if(Karve.Next != null)
+            {
+                Karve.Next.kar = TestKar;
+                if(Karve.GetType() == typeof(Wissel))
+                {
+                    Wissel temp = (Wissel)Karve;
+                    if(temp.Aan == true)
+                    {
+                        Karve.Teken = "\\";
+                    } else
+                    {
+                        Karve.Teken = "/";
+                    }
+                } else if(Karve.GetType() == typeof(Loods))
+                {
+                    for(int i = 0; i < 3; i++)
+                    {
+                        if(Karve == BeginPunten[i])
+                        {
+                            Karve.Teken = BeginPunten[i].Teken;
+                            break;
+                        }
+                    }
+                } else
+                {
+                    Karve.Teken = "-";
+                }
+                Karve.kar = null;
+                Karve.Next.Teken = TestKar.teken;
+                Karve = Karve.Next;
+            }
+            else
+            {
+                Karve.kar = null;
+                Karve.Teken = "-";
+                Karve = BeginPunten[0];
             }
         }
 

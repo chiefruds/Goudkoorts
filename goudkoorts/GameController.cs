@@ -37,10 +37,11 @@ namespace goudkoorts
             }
         }
 
-        public void SchipAnimatie()
+        public void MoveAnimatie()
         {
             Console.Clear();
             game.SchipAnimatie();
+            game.KarAnimatie();
             GenerateStringArray();
             gameView.PrintField(StringArray);
         }

@@ -8,20 +8,20 @@ namespace goudkoorts
 {
     public class Countdown
     {
-        Timer timer;
+        Timer MoveTimer;
         private GameController gc;
 
         public Countdown(GameController gc)
         {
             this.gc = gc;
-            timer = new Timer(500);
-            timer.Elapsed += timer_Elapsed;
-            timer.Start();
+            MoveTimer = new Timer(500);
+            MoveTimer.Elapsed += MoveTimer_elapsed;
+            MoveTimer.Start();
         }
 
-        private void timer_Elapsed(object sender, ElapsedEventArgs e)
+        private void MoveTimer_elapsed(object sender, ElapsedEventArgs e)
         {
-            gc.SchipAnimatie();
+            gc.MoveAnimatie();
         }
     }
 }

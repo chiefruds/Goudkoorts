@@ -8,7 +8,6 @@ namespace goudkoorts
     public class Baan : PlaatsEntiteit
     {
 
-        public Kar kar { get; set; }
 
         public Kar Kar
         {
