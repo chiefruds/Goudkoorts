@@ -3,4 +3,5 @@
 .vs/*
 .vs/goudkoorts/v15/Server/sqlite3/storage.ide-wal
 .vs/goudkoorts/v15/Server/sqlite3/storage.ide
+.goudkoorts/obj/Debug/*
 
