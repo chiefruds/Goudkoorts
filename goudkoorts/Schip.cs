@@ -5,30 +5,15 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Schip
+    public class Schip : VerplaatsEntiteit
     {
-        public int Aangemeerd
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
 
-        public int Lading
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public int Lading;
+        public bool Aangemeerd;
 
-        public int Vaarroute
+        public Schip()
         {
-            get => default(int);
-            set
-            {
-            }
+            teken = "<  >";
         }
     }
 }

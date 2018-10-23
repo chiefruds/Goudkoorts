@@ -5,35 +5,13 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Baan
+    public class Baan : PlaatsEntiteit
     {
-        public int Rijrichting
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+
 
         public Kar Kar
         {
             get => default(Kar);
-            set
-            {
-            }
-        }
-
-        public int Next
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int Previous
-        {
-            get => default(int);
             set
             {
             }

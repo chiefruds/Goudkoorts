@@ -23,9 +23,48 @@ namespace goudkoorts
             Console.WriteLine("#  X          =     een loods               #");
             Console.WriteLine("#  /          =     een wissel              #");
             Console.WriteLine("#  \\         =     een wissel              #");
-            Console.WriteLine("#  --          =    een rangeerterrein      #");
+            Console.WriteLine("#  --         =    een rangeerterrein       #");
             Console.WriteLine("#############################################");
             Console.ReadLine();
+        }
+
+        public void PrintField(String[,] StringArray)
+        {
+            for (int i = 0; i < StringArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < StringArray.GetLength(1); j++)
+                {
+                    if (StringArray[i, j] == null)
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write(StringArray[i, j]);
+                    }
+
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+
+        public void checkInput(GameController gc)
+        {
+            ConsoleKeyInfo keyinfo;
+
+            keyinfo = Console.ReadKey(true);
+            while (keyinfo.Key != ConsoleKey.S)
+            {
+                Console.WriteLine(keyinfo.Key);
+                if (keyinfo.Key == ConsoleKey.D1)
+                {
+                    gc.game.Wissels[0].Wisselen();
+                    gc.GenerateStringArray();
+                    PrintField(gc.StringArray);
+
+                }
+            }
         }
     }
 }

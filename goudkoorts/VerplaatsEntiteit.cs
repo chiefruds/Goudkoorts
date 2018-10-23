@@ -5,11 +5,9 @@ using System.Text;
 
 namespace goudkoorts
 {
-    public class Water : PlaatsEntiteit
+    public class VerplaatsEntiteit
     {
-        public Water()
-        {
-            this.Teken = "~";
-        }
+        public String teken;
+        
     }
 }
