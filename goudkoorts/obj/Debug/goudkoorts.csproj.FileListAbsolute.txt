@@ -5,3 +5,10 @@ C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.
 C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.csproj.CoreCompileInputs.cache
 C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.exe
 C:\Users\rbnde\Documents\modeleren 3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.pdb
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.exe.config
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.exe
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\bin\Debug\goudkoorts.pdb
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.csprojAssemblyReference.cache
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.csproj.CoreCompileInputs.cache
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.exe
+E:\Onedrive\School\BLOK 5\MODL3\Goudkoorts\goudkoorts\obj\Debug\goudkoorts.pdb
