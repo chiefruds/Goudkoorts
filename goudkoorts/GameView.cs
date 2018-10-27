@@ -60,10 +60,29 @@ namespace goudkoorts
                 if (keyinfo.Key == ConsoleKey.D1)
                 {
                     gc.game.Wissels[0].Wisselen();
-                    gc.GenerateStringArray();
-                    PrintField(gc.StringArray);
 
+                } else if(keyinfo.Key == ConsoleKey.D2)
+                {
+                    gc.game.Wissels[1].Wisselen();
                 }
+                else if (keyinfo.Key == ConsoleKey.D3)
+                {
+                    gc.game.Wissels[2].Wisselen();
+                }
+                else if (keyinfo.Key == ConsoleKey.D3)
+                {
+                    gc.game.Wissels[2].Wisselen();
+                }
+                else if (keyinfo.Key == ConsoleKey.D4)
+                {
+                    gc.game.Wissels[3].Wisselen();
+                }
+                else if (keyinfo.Key == ConsoleKey.D5)
+                {
+                    gc.game.Wissels[4].Wisselen();
+                }
+
+                keyinfo = Console.ReadKey(true);
             }
         }
     }

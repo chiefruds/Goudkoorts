@@ -11,5 +11,15 @@ namespace goudkoorts
         {
             this.Teken = "R";
         }
+        public override void Beweeg()
+        {
+            if (Kar != null && this.Next != null)
+            {
+                this.Next.Kar = Kar;
+                Kar.Baan = (Baan)this.Next;
+                this.Kar = null;
+
+            }
+        }
     }
 }

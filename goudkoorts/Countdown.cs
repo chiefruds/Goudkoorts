@@ -14,7 +14,7 @@ namespace goudkoorts
         public Countdown(GameController gc)
         {
             this.gc = gc;
-            MoveTimer = new Timer(500);
+            MoveTimer = new Timer(2000);
             MoveTimer.Elapsed += MoveTimer_elapsed;
             MoveTimer.Start();
         }

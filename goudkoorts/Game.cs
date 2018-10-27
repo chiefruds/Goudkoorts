@@ -26,10 +26,13 @@ namespace goudkoorts
 
         private Schip Scheep = new Schip();
 
+        public List<Kar> KarLijst = new List<Kar>();
+
         private Kar TestKar = new Kar();
 
         private PlaatsEntiteit ve;
-        private PlaatsEntiteit Karve;
+
+        private PlaatsEntiteit Locatie;
 
         public Game(GameController gc)
         {
@@ -37,8 +40,8 @@ namespace goudkoorts
             Objecten = new List<VerplaatsEntiteit>();
             Count = new Countdown(gc);
             ve = RechtsBoven;
-            Karve = BeginPunten[0];
-            Karve.kar = TestKar;
+            //TestKar.Baan = (Baan)BeginPunten[0].Next;
+            GenereerKar();
         }
 
         public void SchipAnimatie()
@@ -55,46 +58,66 @@ namespace goudkoorts
             }
         }
 
-        public void KarAnimatie()
+        public void GenereerKar()
         {
-            if(Karve.Next != null)
+            Random rand = new Random();
+            int random = rand.Next(3);
+
+            Kar kar = new Kar();
+            BeginPunten[random].Next.Kar = kar;
+            kar.Baan = (Baan)BeginPunten[random].Next;
+            KarLijst.Add(kar);
+        }
+
+        public void TestAnimatie()
+        {
+           
+          for(int i = 0; i < KarLijst.Count(); i++)
             {
-                Karve.Next.kar = TestKar;
-                if(Karve.GetType() == typeof(Wissel))
-                {
-                    Wissel temp = (Wissel)Karve;
-                    if(temp.Aan == true)
-                    {
-                        Karve.Teken = temp.Teken;
-                    } else
-                    {
-                        Karve.Teken = temp.Teken;
-                    }
-                } else if(Karve.GetType() == typeof(Loods))
-                {
-                    for(int i = 0; i < 3; i++)
-                    {
-                        if(Karve == BeginPunten[i])
-                        {
-                            Karve.Teken = BeginPunten[i].Teken;
-                            break;
-                        }
-                    }
-                } else
-                {
-                    Karve.Teken = "=";
-                }
-                Karve.kar = null;
-                Karve.Next.Teken = TestKar.teken;
-                Karve = Karve.Next;
-            }
-            else
-            {
-                Karve.kar = null;
-                Karve.Teken = "=";
-                Karve = BeginPunten[0];
+                 KarLijst[i].Beweeg();
             }
         }
+
+        //public void KarAnimatie()
+        //{
+        //    if(Locatie.Next != null)
+        //    {
+        //        Locatie.Next.kar = TestKar;
+        //        if(Locatie.GetType() == typeof(Wissel))
+        //        {
+        //            Wissel temp = (Wissel)Locatie;
+        //            if(temp.Aan == true)
+        //            {
+        //                Locatie.Teken = temp.Teken;
+        //            } else
+        //            {
+        //                Locatie.Teken = temp.Teken;
+        //            }
+        //        } else if(Locatie.GetType() == typeof(Loods))
+        //        {
+        //            for(int i = 0; i < 3; i++)
+        //            {
+        //                if(Locatie == BeginPunten[i])
+        //                {
+        //                    Locatie.Teken = BeginPunten[i].Teken;
+        //                    break;
+        //                }
+        //            }
+        //        } else
+        //        {
+        //            Locatie.Teken = "=";
+        //        }
+        //        Locatie.kar = null;
+        //        Locatie.Next.Teken = TestKar.teken;
+        //        Locatie = Locatie.Next;
+        //    }
+        //    else
+        //    {
+        //        Locatie.kar = null;
+        //        Locatie.Teken = "=";
+        //        Locatie = BeginPunten[0];
+        //    }
+        //}
 
         public void PlayGame()
         {
@@ -158,6 +181,7 @@ namespace goudkoorts
                 {
                     Veld[3, i] = new Baan();
                     Veld[3, i].Teken = "╩";
+                    Veld[3, i].Next = Veld[2, 11];
                 }
                 else
                 {
@@ -170,9 +194,7 @@ namespace goudkoorts
                    
                 }
             }
-
-          
-           
+            
             Veld[4, 4] = new Baan();
             Veld[4, 4].Teken = "=";
             Veld[4, 10] = new Baan();
@@ -191,6 +213,7 @@ namespace goudkoorts
             Veld[5, 1].Next = Veld[5, 2];
             Veld[5, 3] = new Baan();
             Veld[5, 3].Teken = "=";
+            Veld[5, 2].Next = Veld[5, 3];
             Veld[5, 5] = new Baan();
             Veld[5, 5].Teken = "=";
             Veld[5, 6] = new Baan();
@@ -224,7 +247,10 @@ namespace goudkoorts
                        
                 }
             }
-
+            Veld[7, 11] = new Baan();
+            Veld[7, 11].Teken = "╦";
+            Veld[7, 9].Next = Veld[7, 10];
+            Veld[7, 10].Next = Veld[7, 11];
             for (int i = 1; i < 12; i++)
             {
                 if (i <= 8)
@@ -243,12 +269,11 @@ namespace goudkoorts
                     Veld[8, i] = new Baan();
                     Veld[8, i].Next = Veld[8, i - 1];
                     Veld[8, i].Teken = "╩";
-                    Veld[7, 11] = new Baan();
                     Veld[7, 11].Next = Veld[8, i];
-                    Veld[7, 11].Teken = "╦";
+                    
                 }
             }
-
+           
 
             Veld[4, 3] = new Wissel(false, (Baan)Veld[3,3], (Baan)Veld[5,3], false);
             Veld[4, 3].Teken = "╠";
@@ -273,18 +298,11 @@ namespace goudkoorts
 
             Wissels = new Wissel[5];
             Wissels[0] = (Wissel)Veld[4, 3];
-            if (Wissels[0].Boven == null)
-            {
-                Console.WriteLine("boven is null");
-            }
-            else
-            {
-                Console.WriteLine("boven is niet null");
-            }
             Wissels[1] = (Wissel)Veld[4, 5];
             Wissels[2] = (Wissel)Veld[4, 9];
             Wissels[3] = (Wissel)Veld[6, 6];
             Wissels[4] = (Wissel)Veld[6, 8];
+           
         }
 
 

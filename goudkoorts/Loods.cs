@@ -13,5 +13,6 @@ namespace goudkoorts
         {
             this.Teken = naam;
         }
+ 
     }
 }

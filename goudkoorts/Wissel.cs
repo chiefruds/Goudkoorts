@@ -12,7 +12,7 @@ namespace goudkoorts
 
         public Boolean Split { get; set; }
         public Boolean Aan { get; set; }
-        public Wissel(Boolean aan, Baan boven, Baan beneden, Boolean split)
+        public Wissel(Boolean aan, Baan Boven, Baan beneden, Boolean split)
         {
             this.Aan = aan;
             this.Boven = Boven;

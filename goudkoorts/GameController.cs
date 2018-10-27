@@ -20,16 +20,8 @@ namespace goudkoorts
             GenerateStringArray();
             gameView.Start();
             gameView.PrintField(StringArray);
-            //gameView.checkInput(this);
+            gameView.checkInput(this);
 
-            if(game.Wissels[0].Boven == null)
-            {
-                Console.WriteLine("boven is null");
-            } else
-            {
-                Console.WriteLine("boven is niet null");
-            }
-            Console.ReadLine();
         }
 
         public void GenerateStringArray()
@@ -40,7 +32,7 @@ namespace goudkoorts
                 {
                     if(game.Veld[i,j] != null)
                     {
-                        StringArray[i, j] = game.Veld[i, j].Teken;
+                        StringArray[i, j] = game.Veld[i, j].GetTeken();
                     }
                     
                 }
@@ -51,7 +43,8 @@ namespace goudkoorts
         {
             Console.Clear();
             game.SchipAnimatie();
-            game.KarAnimatie();
+            game.TestAnimatie();
+           // game.KarAnimatie();
             GenerateStringArray();
             gameView.PrintField(StringArray);
         }

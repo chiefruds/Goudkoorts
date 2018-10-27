@@ -7,6 +7,7 @@ namespace goudkoorts
 {
     public class Kar : VerplaatsEntiteit
     {
+        public Baan Baan { get; set; }
         public Kar()
         {
             teken = "O";
@@ -19,17 +20,9 @@ namespace goudkoorts
             }
         }
 
-        public Baan Baan
-        {
-            get => default(Baan);
-            set
-            {
-            }
-        }
-
         public void Beweeg()
         {
-            throw new System.NotImplementedException();
+            this.Baan.Beweeg();
         }
     }
 }
