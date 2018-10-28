@@ -11,6 +11,8 @@ namespace goudkoorts
 
         public Kar Kar { get; set; }
 
+        public Schip Schip { get; set; }
+
         public String Teken { get; set; }
 
         public virtual String GetTeken()

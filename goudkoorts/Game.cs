@@ -24,38 +24,56 @@ namespace goudkoorts
 
         public Boolean Playing { get; set; }
 
-        private Schip Scheep = new Schip();
+        
 
         public List<Kar> KarLijst = new List<Kar>();
 
         private Kar TestKar = new Kar();
 
-        private PlaatsEntiteit ve;
-
         private PlaatsEntiteit Locatie;
+
+        private Schip[] schip = new Schip[5];
+        private List<Schip> schipp = new List<Schip>();
 
         public Game(GameController gc)
         {
             _generateMap();
             Objecten = new List<VerplaatsEntiteit>();
             Count = new Countdown(gc);
-            ve = RechtsBoven;
             //TestKar.Baan = (Baan)BeginPunten[0].Next;
+            schipp.Add(new Schip());
+            schipp[0].Lokatie = RechtsBoven;
+            RechtsBoven.Schip = schipp[0];
             GenereerKar();
+
         }
 
         public void SchipAnimatie()
         {
-            if (ve.Next != null)
+            for(int i = 0; i < schipp.Count(); i++)
             {
-                ve.Next.Teken = Scheep.teken;
-                ve.Teken = "~";
-                ve = ve.Next;
-            } else
-            {
-                ve.Teken = "~";
-                ve = RechtsBoven;
+                if(schipp[i] != null)
+                {
+                    schipp[i].Beweeg();
+                    if (schipp[i].Lading == 1)
+                    {
+                        GenereerSchip();
+
+                    }
+                }
             }
+            
+            Kade kade = (Kade)Veld[1, 9];
+            kade.LaadSchip();
+            
+        }
+
+        public void GenereerSchip()
+        {
+            Score += 10;
+            schipp.Add(new Schip { Lokatie = RechtsBoven });
+            RechtsBoven.Schip = schipp.Last();
+
         }
 
         public void GenereerKar()
@@ -76,49 +94,13 @@ namespace goudkoorts
             {
                  KarLijst[i].Beweeg();
             }
+          if(Veld[1,0].Kar != null)
+            {
+                Veld[1, 0].Kar = null;
+            }
         }
 
-        //public void KarAnimatie()
-        //{
-        //    if(Locatie.Next != null)
-        //    {
-        //        Locatie.Next.kar = TestKar;
-        //        if(Locatie.GetType() == typeof(Wissel))
-        //        {
-        //            Wissel temp = (Wissel)Locatie;
-        //            if(temp.Aan == true)
-        //            {
-        //                Locatie.Teken = temp.Teken;
-        //            } else
-        //            {
-        //                Locatie.Teken = temp.Teken;
-        //            }
-        //        } else if(Locatie.GetType() == typeof(Loods))
-        //        {
-        //            for(int i = 0; i < 3; i++)
-        //            {
-        //                if(Locatie == BeginPunten[i])
-        //                {
-        //                    Locatie.Teken = BeginPunten[i].Teken;
-        //                    break;
-        //                }
-        //            }
-        //        } else
-        //        {
-        //            Locatie.Teken = "=";
-        //        }
-        //        Locatie.kar = null;
-        //        Locatie.Next.Teken = TestKar.teken;
-        //        Locatie = Locatie.Next;
-        //    }
-        //    else
-        //    {
-        //        Locatie.kar = null;
-        //        Locatie.Teken = "=";
-        //        Locatie = BeginPunten[0];
-        //    }
-        //}
-
+        
         public void PlayGame()
         {
             while (Playing)
@@ -151,6 +133,8 @@ namespace goudkoorts
             }
 
             Veld[1, 0] = new Baan();
+            Baan baan = (Baan)Veld[1, 0];
+            baan.Laatste = true;
             Veld[1, 0].Teken = "=";
 
             for (int i = 1; i < 12; i++)
@@ -160,6 +144,9 @@ namespace goudkoorts
                     Veld[1, i] = new Kade();
                     Veld[1, i].Next = Veld[1, i - 1];
                     Veld[1, i].Teken = "k";
+                    Kade kade = (Kade)Veld[1, i];
+                    kade.water = (Water)Veld[0, 9];
+                    
                 } else
                 {
                     Veld[1, i] = new Baan();

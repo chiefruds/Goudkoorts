@@ -7,7 +7,8 @@ namespace goudkoorts
 {
     public class Baan : PlaatsEntiteit
     {
-     
+        public Boolean Laatste { get; set; }
+
         public virtual void Beweeg()
         {
             if(this.Next != null && this.Next.Kar != null)
@@ -20,6 +21,7 @@ namespace goudkoorts
                 Kar.Baan = (Baan)this.Next;
                 this.Kar = null;
             }
+
         }
         
         public override String GetTeken()

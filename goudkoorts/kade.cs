@@ -14,7 +14,37 @@ namespace goudkoorts
 
         public void LaadSchip()
         {
-            throw new System.NotImplementedException();
+            if(water.Schip != null)
+            {
+                water.Schip.KanBewegen = false;
+            }
+            
+            if(this.Kar != null && water.Schip != null)
+            {
+                water.Schip.VulSchip();
+            }
+        }
+
+        public override void Beweeg()
+        {
+            if (Kar != null && this.Next != null)
+            {
+                this.Next.Kar = Kar;
+                Kar.Baan = (Baan)this.Next;
+                this.Kar = null;
+            }
+
+            if (water.Schip != null)
+            {
+
+                LaadSchip();
+
+                if (water.Schip.KanBewegen)
+                {
+                    water.Next.Schip = schip;
+                    schip = null;
+                }
+            }
         }
     }
 }

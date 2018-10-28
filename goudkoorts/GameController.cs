@@ -42,6 +42,7 @@ namespace goudkoorts
         public void MoveAnimatie()
         {
             Console.Clear();
+           
             game.SchipAnimatie();
             game.TestAnimatie();
            // game.KarAnimatie();
