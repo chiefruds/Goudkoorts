@@ -55,7 +55,7 @@ namespace goudkoorts
                 if(schipp[i] != null)
                 {
                     schipp[i].Beweeg();
-                    if (schipp[i].Lading == 1)
+                    if (schipp[i].Lading == 8)
                     {
                         schipp[i].Lading = 0;
 
