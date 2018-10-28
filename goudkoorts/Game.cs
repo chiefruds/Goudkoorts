@@ -24,7 +24,7 @@ namespace goudkoorts
 
         public Boolean Playing { get; set; }
 
-        
+        Kade kade;
 
         public List<Kar> KarLijst = new List<Kar>();
 
@@ -45,6 +45,7 @@ namespace goudkoorts
             schipp[0].Lokatie = RechtsBoven;
             RechtsBoven.Schip = schipp[0];
             GenereerKar();
+            kade = (Kade)Veld[1, 9];
 
         }
 
@@ -62,8 +63,7 @@ namespace goudkoorts
                     }
                 }
             }
-            
-            Kade kade = (Kade)Veld[1, 9];
+           
             kade.LaadSchip();
             
         }
@@ -87,7 +87,7 @@ namespace goudkoorts
             KarLijst.Add(kar);
         }
 
-        public void TestAnimatie()
+        public void KarAnimatie()
         {
            
           for(int i = 0; i < KarLijst.Count(); i++)

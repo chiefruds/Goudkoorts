@@ -7,6 +7,13 @@ namespace goudkoorts
 {
     public class GameView
     {
+
+        public Boolean CanPlay { get; set; }
+
+        public GameView()
+        {
+            CanPlay = false;
+        }
         public void Start()
         {
             Console.WriteLine("Welkom bij het spel goudkoorts!");
@@ -25,7 +32,20 @@ namespace goudkoorts
             Console.WriteLine("#  \\         =     een wissel              #");
             Console.WriteLine("#  --         =    een rangeerterrein       #");
             Console.WriteLine("#############################################");
-            Console.ReadLine();
+
+            while (true)
+            {
+                Console.WriteLine("type ja om met het spel te beginnen en type nee om af te sluiten.");
+                String input = Console.ReadLine();
+                if (input.Equals("ja"))
+                {
+                    CanPlay = true;
+                    break;
+                } else if(input.Equals("nee"))
+                {
+                    Environment.Exit(0);
+                }
+            }
         }
 
         public void PrintField(String[,] StringArray)
@@ -84,6 +104,7 @@ namespace goudkoorts
 
                 keyinfo = Console.ReadKey(true);
             }
+            Environment.Exit(0);
         }
     }
 }

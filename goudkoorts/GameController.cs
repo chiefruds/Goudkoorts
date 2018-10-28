@@ -19,7 +19,6 @@ namespace goudkoorts
             StringArray = new string[game.Veld.GetLength(0), game.Veld.GetLength(1)];
             GenerateStringArray();
             gameView.Start();
-            gameView.PrintField(StringArray);
             gameView.checkInput(this);
 
         }
@@ -41,13 +40,15 @@ namespace goudkoorts
 
         public void MoveAnimatie()
         {
-            Console.Clear();
-           
-            game.SchipAnimatie();
-            game.TestAnimatie();
-           // game.KarAnimatie();
-            GenerateStringArray();
-            gameView.PrintField(StringArray);
+            if (gameView.CanPlay)
+            {
+                Console.Clear();
+
+                game.SchipAnimatie();
+                game.KarAnimatie();
+                GenerateStringArray();
+                gameView.PrintField(StringArray);
+            }
         }
 
         public void Play()
