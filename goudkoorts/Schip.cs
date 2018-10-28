@@ -8,7 +8,7 @@ namespace goudkoorts
     public class Schip : VerplaatsEntiteit
     {
         public Water Lokatie { get; set; }
-        public int Lading;
+        public int Lading { get; set; }
         public bool Aangemeerd;
 
         public Schip()
@@ -28,7 +28,7 @@ namespace goudkoorts
             } else if(Lading > 5)
             {
                 teken = "<oo >";
-            } else if (Lading == 1 )
+            } else if (Lading == 8 )
             {
                 teken = "<ooo>";
                 KanBewegen = true;

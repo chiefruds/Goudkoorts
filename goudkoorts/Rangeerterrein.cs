@@ -15,9 +15,12 @@ namespace goudkoorts
         {
             if (Kar != null && this.Next != null)
             {
-                this.Next.Kar = Kar;
-                Kar.Baan = (Baan)this.Next;
-                this.Kar = null;
+                if(this.Next.Kar == null)
+                {
+                    this.Next.Kar = Kar;
+                    Kar.Baan = (Baan)this.Next;
+                    this.Kar = null;
+                }             
 
             }
         }

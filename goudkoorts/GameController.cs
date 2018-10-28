@@ -48,6 +48,7 @@ namespace goudkoorts
                 game.KarAnimatie();
                 GenerateStringArray();
                 gameView.PrintField(StringArray);
+                gameView.PrintScore(this);
             }
         }
 

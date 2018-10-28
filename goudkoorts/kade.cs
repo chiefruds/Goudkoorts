@@ -22,6 +22,8 @@ namespace goudkoorts
             if(this.Kar != null && water.Schip != null)
             {
                 water.Schip.VulSchip();
+                this.Kar.IsVol = false;
+                this.Kar.teken = "O";
             }
         }
 

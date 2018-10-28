@@ -29,7 +29,7 @@ namespace goudkoorts
             Console.WriteLine("#  k          =     een kade                #");
             Console.WriteLine("#  X          =     een loods               #");
             Console.WriteLine("#  /          =     een wissel              #");
-            Console.WriteLine("#  \\         =     een wissel              #");
+            Console.WriteLine("#  \\          =     een wissel              #");
             Console.WriteLine("#  --         =    een rangeerterrein       #");
             Console.WriteLine("#############################################");
 
@@ -46,6 +46,11 @@ namespace goudkoorts
                     Environment.Exit(0);
                 }
             }
+        }
+
+        public void PrintScore(GameController gc)
+        {
+            Console.WriteLine("uw score is: " + gc.game.Score);
         }
 
         public void PrintField(String[,] StringArray)

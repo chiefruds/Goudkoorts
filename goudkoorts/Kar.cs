@@ -8,16 +8,10 @@ namespace goudkoorts
     public class Kar : VerplaatsEntiteit
     {
         public Baan Baan { get; set; }
+        public bool IsVol { get; set; }
         public Kar()
         {
-            teken = "O";
-        }
-        public int IsVol
-        {
-            get => default(int);
-            set
-            {
-            }
+            teken = "Ø";
         }
 
         public void Beweeg()

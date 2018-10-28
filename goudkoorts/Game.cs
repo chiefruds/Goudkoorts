@@ -40,7 +40,6 @@ namespace goudkoorts
             _generateMap();
             Objecten = new List<VerplaatsEntiteit>();
             Count = new Countdown(gc);
-            //TestKar.Baan = (Baan)BeginPunten[0].Next;
             schipp.Add(new Schip());
             schipp[0].Lokatie = RechtsBoven;
             RechtsBoven.Schip = schipp[0];
@@ -58,6 +57,8 @@ namespace goudkoorts
                     schipp[i].Beweeg();
                     if (schipp[i].Lading == 1)
                     {
+                        schipp[i].Lading = 0;
+
                         GenereerSchip();
 
                     }
@@ -263,7 +264,7 @@ namespace goudkoorts
            
 
             Veld[4, 3] = new Wissel(false, (Baan)Veld[3,3], (Baan)Veld[5,3], false);
-            Veld[4, 3].Teken = "╠";
+            Veld[4, 3].Teken = "╦";
             Veld[3, 3].Next = Veld[4, 3];
             Veld[4, 3].Next = Veld[4, 4];
             Veld[4, 5] = new Wissel(true, (Baan)Veld[3,5], (Baan)Veld[5,5], true);
@@ -272,15 +273,15 @@ namespace goudkoorts
             Veld[4, 4].Next = Veld[4, 5];
             Veld[4, 9] = new Wissel(true, (Baan)Veld[3, 9], (Baan)Veld[5, 9], false);
             Veld[4, 9].Next = Veld[4, 10];
-            Veld[4, 9].Teken = "╦";
+            Veld[4, 9].Teken = "╩";
             Veld[3, 9].Next = Veld[4, 9];
             Veld[6, 6] = new Wissel(false, (Baan)Veld[5, 6], (Baan)Veld[7, 6],false);
             Veld[6, 6].Next = Veld[6, 7];
-            Veld[6, 6].Teken = "╩";
+            Veld[6, 6].Teken = "╦";
             Veld[7, 6].Next = Veld[6, 6];
             Veld[6, 8] = new Wissel(false, (Baan)Veld[5,8], (Baan)Veld[7,8], true);
             Veld[6, 8].Next = Veld[7, 8];
-            Veld[6, 8].Teken = "╩";
+            Veld[6, 8].Teken = "╦";
             Veld[6, 7].Next = Veld[6, 8];
 
             Wissels = new Wissel[5];
